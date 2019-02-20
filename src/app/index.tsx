@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { hot } from 'react-hot-loader';
 import { PoseGroup } from 'react-pose';
@@ -9,6 +9,7 @@ import { Game } from 'app/containers/Game';
 import { Settings } from 'app/containers/Settings';
 import { HighScores } from 'app/containers/HighScores';
 import { Background } from 'app/components/Background'
+import { HashRouter } from 'react-router-dom';
 import * as chroma from 'chroma-js'
 import './app.css';
 
@@ -21,10 +22,14 @@ export const App = hot(module)(connect(state => ({color: state.game.background})
         <Background color={chroma(color).darken(1).hex()} key="background">
         </Background>
       </PoseGroup>
-      <Route exact path="/" component={Home} />
-      <Route path="/settings" component={Settings} />
-      <Route path="/high-scores" component={HighScores} />
-      <Route path="/game" component={Game} />
+      <HashRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/settings" component={Settings} />
+          <Route path="/high-scores" component={HighScores} />
+          <Route path="/game" component={Game} />
+        </Switch>
+      </HashRouter>
     </main>
   </div>
 )));

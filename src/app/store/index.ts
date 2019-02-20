@@ -1,13 +1,15 @@
 import { Store, createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk'
-import { createBrowserHistory } from 'history'
 import { routerMiddleware } from 'connected-react-router'
 import { logger } from 'app/middleware';
 import { RootState, rootReducer } from 'app/reducers';
 import initialize from 'app/actions/initialize';
+import { createHashHistory } from 'history'
 
-export const history = createBrowserHistory()
+export const history =  createHashHistory({
+  hashType: 'slash'
+})
 
 export function configureStore(initialState?: RootState): Store<RootState> {
   let middleware = applyMiddleware(routerMiddleware(history), thunk, logger);

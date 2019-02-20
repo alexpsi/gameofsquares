@@ -33,10 +33,8 @@ export namespace GameActions {
     async (dispatch: ThunkDispatch<{}, {}, AnyAction>, getState: any): Promise<void> => new Promise<void>(
       (resolve) => {
         dispatch({ type: Type.CLICK_PANEL, payload: [ y, x ] })
-        dispatch(push('/game'))
         const { lost, score, elapsed } = getState().game
         if (lost) {
-          // stopGameTimer();
           setTimeout(() => {
             const outcome = checkScore(getState().highScores, score, elapsed) ? 'HIGH_SCORE' : 'DEFEAT'
             dispatch({ type: Type.SET_OUTCOME, outcome })

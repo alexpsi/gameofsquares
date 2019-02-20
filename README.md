@@ -1,15 +1,8 @@
-# Frontend Boilerplate with React, Redux & TypeScript
+# A game of squares
 
-A bare minimum react-redux-webpack-typescript boilerplate with TodoMVC example. 
+A little game made as a study around Typescript, React and Redux. 
 
-[Live demo](https://rokoroku.github.io/react-redux-typescript-boilerplate)
-
-Note that this project does not include **Server-Side Rendering**, **Static code analysis**, **Testing Frameworks** and other stuffs that makes the package unnecessarily complicated. (e.g. yarn, tslint, jest, ...)  
-If needed, please fork this repository and add your own that meets your requirements.
-
-Ideal for creating React apps from the scratch.
-
-See also: [react-mobx-typescript-boilerplate](https://github.com/rokoroku/react-mobx-typescript-boilerplate)
+[Live demo](https://alexpsi.github.io/gameofsquares)
 
 ## Contains
 
@@ -18,7 +11,6 @@ See also: [react-mobx-typescript-boilerplate](https://github.com/rokoroku/react-
 - [x] [Redux](https://github.com/reactjs/redux) 4
 - [x] [React Router](https://github.com/ReactTraining/react-router) 4.3
 - [x] [Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
-- [x] [TodoMVC example](http://todomvc.com)
 
 ### Build tools
 
@@ -36,10 +28,10 @@ See also: [react-mobx-typescript-boilerplate](https://github.com/rokoroku/react-
 ## Installation
 
 ```
-$ npm ci
+$ npm install
 ```
 
-## Running
+## Running dev server
 
 ```
 $ npm start

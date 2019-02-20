@@ -55,6 +55,13 @@ $ npm run deploy
 $ npm run prettier
 ```
 
+## Integration testing/ autoplay
+
+Scripts target the gh-page.
+```
+$ npm run autoplay
+```
+
 # License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

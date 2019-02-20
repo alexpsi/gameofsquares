@@ -6,7 +6,7 @@ const score      = Selector('#score');
 const correctBtn = Selector('#correct');
 
 fixture `Game of Squares`
-    .page `http://localhost:3000`;
+    .page `https://alexpsi.github.io/gameofsquares/`;
 
 test('Autoplay until level 60', async t => {
 
